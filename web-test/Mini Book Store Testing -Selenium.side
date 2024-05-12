@@ -1,0 +1,651 @@
+{
+  "id": "88e10b52-a711-455b-9a4c-2987b4f1f6c2",
+  "version": "2.0",
+  "name": "Mini Book Store Testing",
+  "url": "https://mini-book-store-fe.vercel.app/",
+  "tests": [{
+    "id": "940b1ab0-26b1-4547-a223-d8aa90407251",
+    "name": "View table of contents book list",
+    "commands": [{
+      "id": "5bf5d3ce-8a15-493b-bcce-fb58c0672abf",
+      "comment": "",
+      "command": "open",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "8ae635c8-2d7f-4763-8d82-6eeebc21a838",
+      "comment": "",
+      "command": "click",
+      "target": "css=.text-3xl",
+      "targets": [
+        ["css=.text-3xl", "css:finder"],
+        ["xpath=//div[@id='root']/div/div[2]/h1", "xpath:idRelative"],
+        ["xpath=//h1", "xpath:position"],
+        ["xpath=//h1[contains(.,'Books List')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "007d5bca-cb79-4b47-8bd8-db65643d844a",
+      "comment": "",
+      "command": "click",
+      "target": "css=.bg-sky-300:nth-child(1)",
+      "targets": [
+        ["css=.bg-sky-300:nth-child(1)", "css:finder"],
+        ["xpath=//div[@id='root']/div/div/button", "xpath:idRelative"],
+        ["xpath=//button", "xpath:position"],
+        ["xpath=//button[contains(.,'Table')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }]
+  }, {
+    "id": "f67d95db-6eb3-4066-9fbc-2687a9eb7618",
+    "name": "View card of contents books list",
+    "commands": [{
+      "id": "0a216165-fe2c-4e2c-8a8c-f572d461df1e",
+      "comment": "",
+      "command": "open",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "706cbc72-fc86-480b-8b4a-9004c3c89f5f",
+      "comment": "",
+      "command": "click",
+      "target": "css=.text-3xl",
+      "targets": [
+        ["css=.text-3xl", "css:finder"],
+        ["xpath=//div[@id='root']/div/div[2]/h1", "xpath:idRelative"],
+        ["xpath=//h1", "xpath:position"],
+        ["xpath=//h1[contains(.,'Books List')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "d7285333-7f98-4df4-9c80-c77d0c21da85",
+      "comment": "",
+      "command": "click",
+      "target": "css=.bg-sky-300:nth-child(2)",
+      "targets": [
+        ["css=.bg-sky-300:nth-child(2)", "css:finder"],
+        ["xpath=//div[@id='root']/div/div/button[2]", "xpath:idRelative"],
+        ["xpath=//button[2]", "xpath:position"],
+        ["xpath=//button[contains(.,'Card')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }]
+  }, {
+    "id": "9ee7b1ce-9be1-498a-90bc-e1f6492bd6db",
+    "name": "Show the contents of the book",
+    "commands": [{
+      "id": "33860952-37a7-46f6-aa9e-d9b920a29b8a",
+      "comment": "",
+      "command": "open",
+      "target": "https://mini-book-store-fe.vercel.app",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "03ad7097-334e-4ee3-8442-6323d59bbfba",
+      "comment": "",
+      "command": "click",
+      "target": "css=.text-3xl",
+      "targets": [
+        ["css=.text-3xl", "css:finder"],
+        ["xpath=//div[@id='root']/div/div[2]/h1", "xpath:idRelative"],
+        ["xpath=//h1", "xpath:position"],
+        ["xpath=//h1[contains(.,'Books List')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "eb9f15df-14ae-4df5-b03d-63af41489943",
+      "comment": "",
+      "command": "click",
+      "target": "css=.h-8:nth-child(1) .text-green-800",
+      "targets": [
+        ["css=.h-8:nth-child(1) .text-green-800", "css:finder"]
+      ],
+      "value": ""
+    }]
+  }, {
+    "id": "afe05157-8634-4381-aa99-463be380419b",
+    "name": "Edit the contents of the book by valid inputs",
+    "commands": [{
+      "id": "2ed92b15-711e-4e61-8595-82f50e11b9a6",
+      "comment": "",
+      "command": "open",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "1ced44b0-3b05-4f6b-9391-db7a6f8e4f5c",
+      "comment": "",
+      "command": "click",
+      "target": "css=.text-3xl",
+      "targets": [
+        ["css=.text-3xl", "css:finder"],
+        ["xpath=//div[@id='root']/div/div[2]/h1", "xpath:idRelative"],
+        ["xpath=//h1", "xpath:position"],
+        ["xpath=//h1[contains(.,'Books List')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "d673ae8e-a869-4d5c-80ad-981927ab995d",
+      "comment": "",
+      "command": "click",
+      "target": "css=.h-8:nth-child(18) a:nth-child(2) path",
+      "targets": [
+        ["css=.h-8:nth-child(18) a:nth-child(2) path", "css:finder"]
+      ],
+      "value": ""
+    }, {
+      "id": "492fd1e0-a365-4d00-867b-2f33d37143e6",
+      "comment": "",
+      "command": "runScript",
+      "target": "window.scrollTo(0,0)",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "ac7439eb-2016-4111-9b1d-395b1e35c96e",
+      "comment": "",
+      "command": "click",
+      "target": "id=publishYear",
+      "targets": [
+        ["id=publishYear", "id"],
+        ["css=#publishYear", "css:finder"],
+        ["xpath=//input[@id='publishYear']", "xpath:attributes"],
+        ["xpath=//div[@id='root']/div/div[2]/div[3]/input", "xpath:idRelative"],
+        ["xpath=//div[3]/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "53db7872-7bbc-4320-aea4-d5168812bec0",
+      "comment": "",
+      "command": "type",
+      "target": "id=publishYear",
+      "targets": [
+        ["id=publishYear", "id"],
+        ["css=#publishYear", "css:finder"],
+        ["xpath=//input[@id='publishYear']", "xpath:attributes"],
+        ["xpath=//div[@id='root']/div/div[2]/div[3]/input", "xpath:idRelative"],
+        ["xpath=//div[3]/input", "xpath:position"]
+      ],
+      "value": "2021"
+    }, {
+      "id": "99ba0c49-87c9-48d7-9a29-c5d3ae6b8259",
+      "comment": "",
+      "command": "click",
+      "target": "css=.p-2",
+      "targets": [
+        ["css=.p-2", "css:finder"],
+        ["xpath=//div[@id='root']/div/div[2]/button", "xpath:idRelative"],
+        ["xpath=//button", "xpath:position"],
+        ["xpath=//button[contains(.,'Edit Book')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }]
+  }, {
+    "id": "576fb071-c5a7-4fad-bddd-e312a559a519",
+    "name": "Edit the contents of the book by invalid inputs",
+    "commands": [{
+      "id": "03449919-25f8-463b-90d9-baa37749271b",
+      "comment": "",
+      "command": "open",
+      "target": "https://mini-book-store-fe.vercel.app/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "3853b245-23ac-4ac3-ad87-c0455b794078",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1382x744",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "25c4e286-11b0-4509-bb45-b09b4aafb64a",
+      "comment": "",
+      "command": "click",
+      "target": "css=.h-8:nth-child(18) .text-yellow-600",
+      "targets": [
+        ["css=.h-8:nth-child(18) .text-yellow-600", "css:finder"]
+      ],
+      "value": ""
+    }, {
+      "id": "9d99ad49-51e6-4da7-8f04-6d0b80e6ec92",
+      "comment": "",
+      "command": "runScript",
+      "target": "window.scrollTo(0,0)",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "fd47b84e-4d1b-42b2-bc6d-1aa7489b3747",
+      "comment": "",
+      "command": "click",
+      "target": "id=title",
+      "targets": [
+        ["id=title", "id"],
+        ["css=#title", "css:finder"],
+        ["xpath=//input[@id='title']", "xpath:attributes"],
+        ["xpath=//div[@id='root']/div/div[2]/div/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "cc1fd526-0622-4b50-9cef-940c18c58a2c",
+      "comment": "",
+      "command": "click",
+      "target": "id=author",
+      "targets": [
+        ["id=author", "id"],
+        ["css=#author", "css:finder"],
+        ["xpath=//input[@id='author']", "xpath:attributes"],
+        ["xpath=//div[@id='root']/div/div[2]/div[2]/input", "xpath:idRelative"],
+        ["xpath=//div[2]/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "a3bd779c-88df-4683-8254-7af846773c50",
+      "comment": "",
+      "command": "type",
+      "target": "id=author",
+      "targets": [
+        ["id=author", "id"],
+        ["css=#author", "css:finder"],
+        ["xpath=//input[@id='author']", "xpath:attributes"],
+        ["xpath=//div[@id='root']/div/div[2]/div[2]/input", "xpath:idRelative"],
+        ["xpath=//div[2]/input", "xpath:position"]
+      ],
+      "value": "297310371"
+    }, {
+      "id": "1f7057a6-feb8-432a-b2ee-c80fef696568",
+      "comment": "",
+      "command": "click",
+      "target": "id=publishYear",
+      "targets": [
+        ["id=publishYear", "id"],
+        ["css=#publishYear", "css:finder"],
+        ["xpath=//input[@id='publishYear']", "xpath:attributes"],
+        ["xpath=//div[@id='root']/div/div[2]/div[3]/input", "xpath:idRelative"],
+        ["xpath=//div[3]/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "57df65f5-c0c6-4e37-b66b-51aeed639bb9",
+      "comment": "",
+      "command": "type",
+      "target": "id=publishYear",
+      "targets": [
+        ["id=publishYear", "id"],
+        ["css=#publishYear", "css:finder"],
+        ["xpath=//input[@id='publishYear']", "xpath:attributes"],
+        ["xpath=//div[@id='root']/div/div[2]/div[3]/input", "xpath:idRelative"],
+        ["xpath=//div[3]/input", "xpath:position"]
+      ],
+      "value": "-1"
+    }, {
+      "id": "253c26bd-a2e6-46ef-a2b6-405bacb53e19",
+      "comment": "",
+      "command": "click",
+      "target": "css=.p-2",
+      "targets": [
+        ["css=.p-2", "css:finder"],
+        ["xpath=//div[@id='root']/div/div[2]/button", "xpath:idRelative"],
+        ["xpath=//button", "xpath:position"],
+        ["xpath=//button[contains(.,'Edit Book')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }]
+  }, {
+    "id": "f8e2de5a-3c1f-4a53-b152-496e2c2dd276",
+    "name": "Delete a book from the book list",
+    "commands": [{
+      "id": "cd133d03-33a7-48e4-987a-838a0d1d17e7",
+      "comment": "",
+      "command": "open",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "6aa17fe2-713a-438a-90d8-0b68aeb6d6af",
+      "comment": "",
+      "command": "click",
+      "target": "css=.text-3xl",
+      "targets": [
+        ["css=.text-3xl", "css:finder"],
+        ["xpath=//div[@id='root']/div/div[2]/h1", "xpath:idRelative"],
+        ["xpath=//h1", "xpath:position"],
+        ["xpath=//h1[contains(.,'Books List')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "23b1d392-f604-4989-a370-193998a13b86",
+      "comment": "",
+      "command": "click",
+      "target": "css=.h-8:nth-child(16) > .border:nth-child(2)",
+      "targets": [
+        ["css=.h-8:nth-child(16) > .border:nth-child(2)", "css:finder"],
+        ["xpath=//div[@id='root']/div/table/tbody/tr[16]/td[2]", "xpath:idRelative"],
+        ["xpath=//tr[16]/td[2]", "xpath:position"],
+        ["xpath=//td[contains(.,'Anomali')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "e4cf0ede-2e62-4568-ad63-32554d7e309d",
+      "comment": "",
+      "command": "click",
+      "target": "css=.h-8:nth-child(16) .text-red-600",
+      "targets": [
+        ["css=.h-8:nth-child(16) .text-red-600", "css:finder"]
+      ],
+      "value": ""
+    }, {
+      "id": "b65ef85e-8960-4f00-8270-b6f5813bbc83",
+      "comment": "",
+      "command": "click",
+      "target": "css=.bg-red-600",
+      "targets": [
+        ["css=.bg-red-600", "css:finder"],
+        ["xpath=//div[@id='root']/div/div[2]/button", "xpath:idRelative"],
+        ["xpath=//button", "xpath:position"],
+        ["xpath=//button[contains(.,'Yes')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }]
+  }, {
+    "id": "9bddf974-22c7-4e16-90b8-008602c52f75",
+    "name": "Incomplete delete a book from the book list",
+    "commands": [{
+      "id": "e9cf1f06-d543-4ae4-b19c-d66dd40ab000",
+      "comment": "",
+      "command": "open",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "0e51c6ec-a83c-43d4-a17e-73662a7d56c8",
+      "comment": "",
+      "command": "click",
+      "target": "css=.text-3xl",
+      "targets": [
+        ["css=.text-3xl", "css:finder"],
+        ["xpath=//div[@id='root']/div/div[2]/h1", "xpath:idRelative"],
+        ["xpath=//h1", "xpath:position"],
+        ["xpath=//h1[contains(.,'Books List')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "f08f140a-9015-43e0-b4d3-39c852566fe7",
+      "comment": "",
+      "command": "click",
+      "target": "css=.h-8:nth-child(1) .text-red-600",
+      "targets": [
+        ["css=.h-8:nth-child(1) .text-red-600", "css:finder"]
+      ],
+      "value": ""
+    }, {
+      "id": "16705c3d-7b81-4305-956d-3296aa62d331",
+      "comment": "",
+      "command": "close",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }]
+  }, {
+    "id": "58bf5cba-b3d0-47f4-a2d6-05ab3508f59e",
+    "name": "Create a new book with valid inputs",
+    "commands": [{
+      "id": "c978b3d4-dd0c-4ca7-af42-d52805018dea",
+      "comment": "",
+      "command": "open",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "65f7e9ec-0702-48b2-a332-fc8ca59c5ac4",
+      "comment": "",
+      "command": "click",
+      "target": "css=.text-3xl",
+      "targets": [
+        ["css=.text-3xl", "css:finder"],
+        ["xpath=//div[@id='root']/div/div[2]/h1", "xpath:idRelative"],
+        ["xpath=//h1", "xpath:position"],
+        ["xpath=//h1[contains(.,'Books List')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "9178aab9-40b9-4f67-b543-b71aa91750f7",
+      "comment": "",
+      "command": "click",
+      "target": "css=.text-sky-800 > path:nth-child(2)",
+      "targets": [
+        ["css=.text-sky-800 > path:nth-child(2)", "css:finder"]
+      ],
+      "value": ""
+    }, {
+      "id": "dca291f9-04fd-4ae5-9151-538056d9bcb8",
+      "comment": "",
+      "command": "type",
+      "target": "id=title",
+      "targets": [
+        ["id=title", "id"],
+        ["css=#title", "css:finder"],
+        ["xpath=//input[@id='title']", "xpath:attributes"],
+        ["xpath=//div[@id='root']/div/div[2]/div/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "Anomali"
+    }, {
+      "id": "b24fef6d-e19a-46aa-be00-e9396492bd27",
+      "comment": "",
+      "command": "type",
+      "target": "id=author",
+      "targets": [
+        ["id=author", "id"],
+        ["css=#author", "css:finder"],
+        ["xpath=//input[@id='author']", "xpath:attributes"],
+        ["xpath=//div[@id='root']/div/div[2]/div[2]/input", "xpath:idRelative"],
+        ["xpath=//div[2]/input", "xpath:position"]
+      ],
+      "value": "Elnov"
+    }, {
+      "id": "f35654c1-96fa-4d3c-8387-6ad5dc0cb696",
+      "comment": "",
+      "command": "type",
+      "target": "id=publishYear",
+      "targets": [
+        ["id=publishYear", "id"],
+        ["css=#publishYear", "css:finder"],
+        ["xpath=//input[@id='publishYear']", "xpath:attributes"],
+        ["xpath=//div[@id='root']/div/div[2]/div[3]/input", "xpath:idRelative"],
+        ["xpath=//div[3]/input", "xpath:position"]
+      ],
+      "value": "2020"
+    }, {
+      "id": "430c0775-fde1-489d-8b89-48ffb9ed7425",
+      "comment": "",
+      "command": "click",
+      "target": "css=.p-2",
+      "targets": [
+        ["css=.p-2", "css:finder"],
+        ["xpath=//div[@id='root']/div/div[2]/button", "xpath:idRelative"],
+        ["xpath=//button", "xpath:position"],
+        ["xpath=//button[contains(.,'Save Book')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "788d2751-8498-4174-a2ef-f02d4432619c",
+      "comment": "",
+      "command": "close",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }]
+  }, {
+    "id": "0041dc1f-22be-427d-ad9a-0b7de2c2f207",
+    "name": "Create a new book with invalid inputs",
+    "commands": [{
+      "id": "90635945-4238-4902-98bc-e2ed8d18965c",
+      "comment": "",
+      "command": "open",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "82d3d1b6-b9e4-4870-b22f-502c4c8f19c2",
+      "comment": "",
+      "command": "click",
+      "target": "css=.text-3xl",
+      "targets": [
+        ["css=.text-3xl", "css:finder"],
+        ["xpath=//div[@id='root']/div/div[2]/h1", "xpath:idRelative"],
+        ["xpath=//h1", "xpath:position"],
+        ["xpath=//h1[contains(.,'Books List')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "2207d438-9a0f-4c56-b704-5a1e6418a0ef",
+      "comment": "",
+      "command": "click",
+      "target": "css=.text-sky-800",
+      "targets": [
+        ["css=.text-sky-800", "css:finder"]
+      ],
+      "value": ""
+    }, {
+      "id": "bb1959b8-0a88-4b52-8e83-c1446c866efe",
+      "comment": "",
+      "command": "type",
+      "target": "id=title",
+      "targets": [
+        ["id=title", "id"],
+        ["css=#title", "css:finder"],
+        ["xpath=//input[@id='title']", "xpath:attributes"],
+        ["xpath=//div[@id='root']/div/div[2]/div/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "Book19310816"
+    }, {
+      "id": "33c6d5df-c1fb-4dab-9f1c-b701edd300eb",
+      "comment": "",
+      "command": "type",
+      "target": "id=author",
+      "targets": [
+        ["id=author", "id"],
+        ["css=#author", "css:finder"],
+        ["xpath=//input[@id='author']", "xpath:attributes"],
+        ["xpath=//div[@id='root']/div/div[2]/div[2]/input", "xpath:idRelative"],
+        ["xpath=//div[2]/input", "xpath:position"]
+      ],
+      "value": "984209@&*360"
+    }, {
+      "id": "247eaf24-c083-4941-9136-9d44b38b2025",
+      "comment": "",
+      "command": "type",
+      "target": "id=publishYear",
+      "targets": [
+        ["id=publishYear", "id"],
+        ["css=#publishYear", "css:finder"],
+        ["xpath=//input[@id='publishYear']", "xpath:attributes"],
+        ["xpath=//div[@id='root']/div/div[2]/div[3]/input", "xpath:idRelative"],
+        ["xpath=//div[3]/input", "xpath:position"]
+      ],
+      "value": "0"
+    }, {
+      "id": "b89a401d-85a3-4e70-bfa3-871dc38969fa",
+      "comment": "",
+      "command": "click",
+      "target": "css=.p-2",
+      "targets": [
+        ["css=.p-2", "css:finder"],
+        ["xpath=//div[@id='root']/div/div[2]/button", "xpath:idRelative"],
+        ["xpath=//button", "xpath:position"],
+        ["xpath=//button[contains(.,'Save Book')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }]
+  }, {
+    "id": "2ea3e4e6-307d-400d-a353-e0cc974f21d4",
+    "name": "Create a new book with empty inputs",
+    "commands": [{
+      "id": "dc5b8c9e-29af-4cba-8053-df09c474c291",
+      "comment": "",
+      "command": "open",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "c8749507-dd0e-4b26-8f31-25f7297c0f95",
+      "comment": "",
+      "command": "click",
+      "target": "css=.text-3xl",
+      "targets": [
+        ["css=.text-3xl", "css:finder"],
+        ["xpath=//div[@id='root']/div/div[2]/h1", "xpath:idRelative"],
+        ["xpath=//h1", "xpath:position"],
+        ["xpath=//h1[contains(.,'Books List')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "47fca470-e6c7-4872-b809-38132df38fbe",
+      "comment": "",
+      "command": "click",
+      "target": "css=.text-sky-800 > path:nth-child(2)",
+      "targets": [
+        ["css=.text-sky-800 > path:nth-child(2)", "css:finder"]
+      ],
+      "value": ""
+    }, {
+      "id": "82e2c3a2-a4b9-44e7-808a-b1c7dc9ee4da",
+      "comment": "",
+      "command": "click",
+      "target": "css=.p-2",
+      "targets": [
+        ["css=.p-2", "css:finder"],
+        ["xpath=//div[@id='root']/div/div[2]/button", "xpath:idRelative"],
+        ["xpath=//button", "xpath:position"],
+        ["xpath=//button[contains(.,'Save Book')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "2e2bd4f1-1667-4bd3-b48e-720f8e7da32b",
+      "comment": "",
+      "command": "close",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }]
+  }],
+  "suites": [{
+    "id": "b41cfc92-7607-48bf-b0d2-7478373af067",
+    "name": "Book List",
+    "persistSession": false,
+    "parallel": false,
+    "timeout": 300,
+    "tests": ["940b1ab0-26b1-4547-a223-d8aa90407251", "f67d95db-6eb3-4066-9fbc-2687a9eb7618", "9ee7b1ce-9be1-498a-90bc-e1f6492bd6db"]
+  }, {
+    "id": "49ab8486-c05b-48e9-89af-b521beb5cdf6",
+    "name": "Create Book",
+    "persistSession": false,
+    "parallel": false,
+    "timeout": 300,
+    "tests": ["2ea3e4e6-307d-400d-a353-e0cc974f21d4", "0041dc1f-22be-427d-ad9a-0b7de2c2f207", "58bf5cba-b3d0-47f4-a2d6-05ab3508f59e"]
+  }, {
+    "id": "34d5f0aa-6aae-4dc8-8c71-87204aeeedd1",
+    "name": "Edit Book",
+    "persistSession": false,
+    "parallel": false,
+    "timeout": 300,
+    "tests": ["afe05157-8634-4381-aa99-463be380419b", "576fb071-c5a7-4fad-bddd-e312a559a519"]
+  }, {
+    "id": "8c44afc7-70b9-453f-b674-2f3b50b98f2a",
+    "name": "Delete Book",
+    "persistSession": false,
+    "parallel": false,
+    "timeout": 300,
+    "tests": ["f8e2de5a-3c1f-4a53-b152-496e2c2dd276", "9bddf974-22c7-4e16-90b8-008602c52f75"]
+  }],
+  "urls": ["https://mini-book-store-fe.vercel.app/"],
+  "plugins": [{
+    "id": "fbnkflkahhlmhdgkddaafgnnokifobik",
+    "name": "Applitools",
+    "version": "1.0.0"
+  }]
+}

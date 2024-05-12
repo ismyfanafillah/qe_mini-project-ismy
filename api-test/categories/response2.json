@@ -1,0 +1,1 @@
+{"error":"ERROR: new row for relation \"categories\" violates check constraint \"categories_name_check\" (SQLSTATE 23514)"}

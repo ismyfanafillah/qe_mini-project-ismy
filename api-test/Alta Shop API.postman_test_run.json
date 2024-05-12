@@ -1,0 +1,1615 @@
+{
+	"id": "47d08357-d6e4-4076-b529-373889397fab",
+	"name": "Alta Shop API",
+	"timestamp": "2024-05-12T18:08:26.107Z",
+	"collection_id": "33061954-caee91d7-b487-4632-b157-325afadc3465",
+	"folder_id": 0,
+	"environment_id": "0",
+	"totalPass": 124,
+	"delay": 0,
+	"persist": true,
+	"status": "finished",
+	"startedAt": "2024-05-12T18:08:19.421Z",
+	"totalFail": 4,
+	"results": [
+		{
+			"id": "6c0f3609-46be-43bf-bd7a-bfe093544900",
+			"name": "Register with valid inputs",
+			"url": "https://altashop-api.fly.dev/api/auth/register",
+			"time": 103,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"response must be valid and have a body": true,
+				"Response status code should have 200 value": true,
+				"Password property should be a non-empty string": true,
+				"Response data object should have ID, Fullname, Email, and Password properties": true,
+				"Request body should match expected format and values": true,
+				"Response time is within acceptable range": true
+			},
+			"testPassFailCounts": {
+				"response must be valid and have a body": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response status code should have 200 value": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Password property should be a non-empty string": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response data object should have ID, Fullname, Email, and Password properties": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Request body should match expected format and values": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response time is within acceptable range": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				103
+			],
+			"allTests": [
+				{
+					"response must be valid and have a body": true,
+					"Response status code should have 200 value": true,
+					"Password property should be a non-empty string": true,
+					"Response data object should have ID, Fullname, Email, and Password properties": true,
+					"Request body should match expected format and values": true,
+					"Response time is within acceptable range": true
+				}
+			]
+		},
+		{
+			"id": "168e1ef1-16e2-479b-8b67-c8e81065f04f",
+			"name": "Register with invalid email",
+			"url": "https://altashop-api.fly.dev/api/auth/register",
+			"time": 70,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Response must be bad request and have a JSON body": false,
+				"Response status code should be 400 for invalid email format": false,
+				"Email should contain '@'": false,
+				"Check if response contains expected error for missing '@' in email": false,
+				"Request body should match expected format and values for missing '@' in email": true
+			},
+			"testPassFailCounts": {
+				"Response must be bad request and have a JSON body": {
+					"pass": 0,
+					"fail": 1
+				},
+				"Response status code should be 400 for invalid email format": {
+					"pass": 0,
+					"fail": 1
+				},
+				"Email should contain '@'": {
+					"pass": 0,
+					"fail": 1
+				},
+				"Check if response contains expected error for missing '@' in email": {
+					"pass": 0,
+					"fail": 1
+				},
+				"Request body should match expected format and values for missing '@' in email": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				70
+			],
+			"allTests": [
+				{
+					"Response must be bad request and have a JSON body": false,
+					"Response status code should be 400 for invalid email format": false,
+					"Email should contain '@'": false,
+					"Check if response contains expected error for missing '@' in email": false,
+					"Request body should match expected format and values for missing '@' in email": true
+				}
+			]
+		},
+		{
+			"id": "1412c640-0917-4c7b-b59a-d36e4560dc58",
+			"name": "Register with email already exists",
+			"url": "https://altashop-api.fly.dev/api/auth/register",
+			"time": 29,
+			"responseCode": {
+				"code": 400,
+				"name": "Bad Request"
+			},
+			"tests": {
+				"response must bad request and have a body": true,
+				"Response status code should be 400 for bad request": true,
+				"Check if response contains expected": true,
+				"Response data object should have error and errorCode properties for duplicate email": true,
+				"Request body should match expected format and values for duplicate email": true
+			},
+			"testPassFailCounts": {
+				"response must bad request and have a body": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response status code should be 400 for bad request": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Check if response contains expected": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response data object should have error and errorCode properties for duplicate email": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Request body should match expected format and values for duplicate email": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				29
+			],
+			"allTests": [
+				{
+					"response must bad request and have a body": true,
+					"Response status code should be 400 for bad request": true,
+					"Check if response contains expected": true,
+					"Response data object should have error and errorCode properties for duplicate email": true,
+					"Request body should match expected format and values for duplicate email": true
+				}
+			]
+		},
+		{
+			"id": "fa276ad5-8dee-4dee-affc-165e825b100e",
+			"name": "Register with empty JSON Body",
+			"url": "https://altashop-api.fly.dev/api/auth/register",
+			"time": 24,
+			"responseCode": {
+				"code": 400,
+				"name": "Bad Request"
+			},
+			"tests": {
+				"response must bad request and have a body": true,
+				"Response status code should be 400 for bad request": true,
+				"Response should contain error message for empty JSON body": true
+			},
+			"testPassFailCounts": {
+				"response must bad request and have a body": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response status code should be 400 for bad request": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response should contain error message for empty JSON body": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				24
+			],
+			"allTests": [
+				{
+					"response must bad request and have a body": true,
+					"Response status code should be 400 for bad request": true,
+					"Response should contain error message for empty JSON body": true
+				}
+			]
+		},
+		{
+			"id": "eaee6ef0-bc9a-4f7c-a743-1510bc5939ad",
+			"name": "Login with valid credentials",
+			"url": "https://altashop-api.fly.dev/api/auth/login",
+			"time": 30,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"response must be valid and have a body": true,
+				"Response status code should be 200 for valid credentials": true,
+				"Data in the response should not be empty": true,
+				"Data field should exist and be of type string": true,
+				"Request body should match expected format and values": true,
+				"Response time is less than 500ms": true
+			},
+			"testPassFailCounts": {
+				"response must be valid and have a body": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response status code should be 200 for valid credentials": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Data in the response should not be empty": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Data field should exist and be of type string": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Request body should match expected format and values": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response time is less than 500ms": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				30
+			],
+			"allTests": [
+				{
+					"response must be valid and have a body": true,
+					"Response status code should be 200 for valid credentials": true,
+					"Data in the response should not be empty": true,
+					"Data field should exist and be of type string": true,
+					"Request body should match expected format and values": true,
+					"Response time is less than 500ms": true
+				}
+			]
+		},
+		{
+			"id": "98a9afbd-82bc-4d5a-9e64-0009841e33ed",
+			"name": "Login without password or email",
+			"url": "https://altashop-api.fly.dev/api/auth/login",
+			"time": 34,
+			"responseCode": {
+				"code": 400,
+				"name": "Bad Request"
+			},
+			"tests": {
+				"response must be bad request and have a body": true,
+				"Response status code is 400": true,
+				"Response body format matches the expected schema": true,
+				"Verify the length of the response data": true,
+				"Response time is less than 200ms": true
+			},
+			"testPassFailCounts": {
+				"response must be bad request and have a body": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response status code is 400": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response body format matches the expected schema": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Verify the length of the response data": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response time is less than 200ms": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				34
+			],
+			"allTests": [
+				{
+					"response must be bad request and have a body": true,
+					"Response status code is 400": true,
+					"Response body format matches the expected schema": true,
+					"Verify the length of the response data": true,
+					"Response time is less than 200ms": true
+				}
+			]
+		},
+		{
+			"id": "1ba17714-31da-49eb-997f-8020a1b4aabd",
+			"name": "Login with invalid email",
+			"url": "https://altashop-api.fly.dev/api/auth/login",
+			"time": 28,
+			"responseCode": {
+				"code": 400,
+				"name": "Bad Request"
+			},
+			"tests": {
+				"response must be bad request and have a body": true,
+				"Response status code is 400": true,
+				"Response has the required field 'error'": true,
+				"Response time is less than 500ms": true
+			},
+			"testPassFailCounts": {
+				"response must be bad request and have a body": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response status code is 400": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response has the required field 'error'": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response time is less than 500ms": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				28
+			],
+			"allTests": [
+				{
+					"response must be bad request and have a body": true,
+					"Response status code is 400": true,
+					"Response has the required field 'error'": true,
+					"Response time is less than 500ms": true
+				}
+			]
+		},
+		{
+			"id": "52c7b43e-8973-4832-8b6c-0a3e2207debc",
+			"name": "Login with invalid password",
+			"url": "https://altashop-api.fly.dev/api/auth/login",
+			"time": 35,
+			"responseCode": {
+				"code": 400,
+				"name": "Bad Request"
+			},
+			"tests": {
+				"response must be bad request and have a body": true,
+				"Response status code is 400": true,
+				"Response has the required field 'error'": true,
+				"Response time is less than 500ms": true
+			},
+			"testPassFailCounts": {
+				"response must be bad request and have a body": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response status code is 400": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response has the required field 'error'": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response time is less than 500ms": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				35
+			],
+			"allTests": [
+				{
+					"response must be bad request and have a body": true,
+					"Response status code is 400": true,
+					"Response has the required field 'error'": true,
+					"Response time is less than 500ms": true
+				}
+			]
+		},
+		{
+			"id": "9c7a433a-44ab-4877-8049-13c1a23a3c86",
+			"name": "Login with empty JSON body",
+			"url": "https://altashop-api.fly.dev/api/auth/login",
+			"time": 25,
+			"responseCode": {
+				"code": 400,
+				"name": "Bad Request"
+			},
+			"tests": {
+				"response must be bad request and have a body": true,
+				"Response status code is 400": true,
+				"Response time is less than 100ms": true,
+				"Response should contain error message for empty JSON body": true
+			},
+			"testPassFailCounts": {
+				"response must be bad request and have a body": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response status code is 400": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response time is less than 100ms": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response should contain error message for empty JSON body": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				25
+			],
+			"allTests": [
+				{
+					"response must be bad request and have a body": true,
+					"Response status code is 400": true,
+					"Response time is less than 100ms": true,
+					"Response should contain error message for empty JSON body": true
+				}
+			]
+		},
+		{
+			"id": "90571194-b510-410f-8b95-dd13a43a2694",
+			"name": "Get user info with valid URL and valid HTTP method",
+			"url": "https://altashop-api.fly.dev/api/auth/info",
+			"time": 82,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"response must be valid and have a body": true,
+				"Response status code is 200": true,
+				"Response time is less than 500ms": true,
+				"Response data object should have ID, Fullname, Email, and Password properties": true
+			},
+			"testPassFailCounts": {
+				"response must be valid and have a body": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response status code is 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response time is less than 500ms": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response data object should have ID, Fullname, Email, and Password properties": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				82
+			],
+			"allTests": [
+				{
+					"response must be valid and have a body": true,
+					"Response status code is 200": true,
+					"Response time is less than 500ms": true,
+					"Response data object should have ID, Fullname, Email, and Password properties": true
+				}
+			]
+		},
+		{
+			"id": "079d4398-d717-475e-8f60-1c1476c7fb41",
+			"name": "Get user info with invalid URL",
+			"url": "https://altashop-api.fly.dev/api/auth/information",
+			"time": 26,
+			"responseCode": {
+				"code": 404,
+				"name": "Not Found"
+			},
+			"tests": {
+				"Response status code is 404": true,
+				"Response must be not found": true,
+				"Response time is less than 300ms": true
+			},
+			"testPassFailCounts": {
+				"Response status code is 404": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response must be not found": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response time is less than 300ms": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				26
+			],
+			"allTests": [
+				{
+					"Response status code is 404": true,
+					"Response must be not found": true,
+					"Response time is less than 300ms": true
+				}
+			]
+		},
+		{
+			"id": "187f2120-dc0b-4a4e-9bee-dd4396029b42",
+			"name": "Get user info with invalid HTTP method",
+			"url": "https://altashop-api.fly.dev/api/auth/info",
+			"time": 26,
+			"responseCode": {
+				"code": 405,
+				"name": "Method Not Allowed"
+			},
+			"tests": {
+				"Response status code is 405 for method not allowed": true,
+				"Response time is less than 200ms": true,
+				"Response body contains the expected string 'method not allowed'": true
+			},
+			"testPassFailCounts": {
+				"Response status code is 405 for method not allowed": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response time is less than 200ms": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response body contains the expected string 'method not allowed'": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				26
+			],
+			"allTests": [
+				{
+					"Response status code is 405 for method not allowed": true,
+					"Response time is less than 200ms": true,
+					"Response body contains the expected string 'method not allowed'": true
+				}
+			]
+		},
+		{
+			"id": "2518c89c-4465-4dcb-985f-029d58a06da5",
+			"name": "Get all Products with valid URL",
+			"url": "https://altashop-api.fly.dev/api/products",
+			"time": 1109,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"response must be valid and have a body": true,
+				"Response status code is 200": true,
+				"Response data object should have ID, Name, Description, Price, Ratings, and Categories properties": true,
+				"Response time is less than 1500ms": true,
+				"Response content type is application/json": true
+			},
+			"testPassFailCounts": {
+				"response must be valid and have a body": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response status code is 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response data object should have ID, Name, Description, Price, Ratings, and Categories properties": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response time is less than 1500ms": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response content type is application/json": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				1109
+			],
+			"allTests": [
+				{
+					"response must be valid and have a body": true,
+					"Response status code is 200": true,
+					"Response data object should have ID, Name, Description, Price, Ratings, and Categories properties": true,
+					"Response time is less than 1500ms": true,
+					"Response content type is application/json": true
+				}
+			]
+		},
+		{
+			"id": "20d7ec6f-265e-45ba-9324-26d4d3f7530d",
+			"name": "Get all products with invalid URL",
+			"url": "https://altashop-api.fly.dev/api/product",
+			"time": 24,
+			"responseCode": {
+				"code": 404,
+				"name": "Not Found"
+			},
+			"tests": {
+				"Response status code is 404": true,
+				"Response body contains the expected string 'not found'": true,
+				"Response time is less than 300ms": true
+			},
+			"testPassFailCounts": {
+				"Response status code is 404": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response body contains the expected string 'not found'": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response time is less than 300ms": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				24
+			],
+			"allTests": [
+				{
+					"Response status code is 404": true,
+					"Response body contains the expected string 'not found'": true,
+					"Response time is less than 300ms": true
+				}
+			]
+		},
+		{
+			"id": "23375f8b-5b54-4df5-ab69-49617b4d56d1",
+			"name": "Get a single product by valid ID",
+			"url": "https://altashop-api.fly.dev/api/products/89348",
+			"time": 28,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"response must be valid and have a body": true,
+				"Status code is 200": true,
+				"Response contains product ID": true,
+				"Response data object should have ID, Name, Description, Price, Ratings, and Categories properties": true
+			},
+			"testPassFailCounts": {
+				"response must be valid and have a body": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Status code is 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response contains product ID": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response data object should have ID, Name, Description, Price, Ratings, and Categories properties": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				28
+			],
+			"allTests": [
+				{
+					"response must be valid and have a body": true,
+					"Status code is 200": true,
+					"Response contains product ID": true,
+					"Response data object should have ID, Name, Description, Price, Ratings, and Categories properties": true
+				}
+			]
+		},
+		{
+			"id": "92840b4c-b815-4c89-a7b7-cd56931bfb23",
+			"name": "Get a single product by invalid ID",
+			"url": "https://altashop-api.fly.dev/api/products/01",
+			"time": 27,
+			"responseCode": {
+				"code": 404,
+				"name": "Not Found"
+			},
+			"tests": {
+				"Response status code is 404": true,
+				"Response body contains the expected 'error'": true,
+				"Response time is less than 500ms": true
+			},
+			"testPassFailCounts": {
+				"Response status code is 404": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response body contains the expected 'error'": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response time is less than 500ms": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				27
+			],
+			"allTests": [
+				{
+					"Response status code is 404": true,
+					"Response body contains the expected 'error'": true,
+					"Response time is less than 500ms": true
+				}
+			]
+		},
+		{
+			"id": "e7f0474f-127c-43b6-bd1a-8c64cbc87a31",
+			"name": "Create a new product with JSON body format",
+			"url": "https://altashop-api.fly.dev/api/products",
+			"time": 30,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Response must be valid and have a body": true,
+				"Response status code should have 200 value": true,
+				"Response data object should have ID, Name, Description, Price, Ratings, and Categories properties": true,
+				"Request body should match expected format and values": true,
+				"Response time is within acceptable range": true
+			},
+			"testPassFailCounts": {
+				"Response must be valid and have a body": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response status code should have 200 value": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response data object should have ID, Name, Description, Price, Ratings, and Categories properties": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Request body should match expected format and values": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response time is within acceptable range": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				30
+			],
+			"allTests": [
+				{
+					"Response must be valid and have a body": true,
+					"Response status code should have 200 value": true,
+					"Response data object should have ID, Name, Description, Price, Ratings, and Categories properties": true,
+					"Request body should match expected format and values": true,
+					"Response time is within acceptable range": true
+				}
+			]
+		},
+		{
+			"id": "209b76b1-cf5e-41bc-aacb-96256b224561",
+			"name": "Create a new product with empty JSON body",
+			"url": "https://altashop-api.fly.dev/api/products",
+			"time": 23,
+			"responseCode": {
+				"code": 400,
+				"name": "Bad Request"
+			},
+			"tests": {
+				"Response status code should be 400 for bad request": true,
+				"Response should contain error message for empty JSON body": true,
+				"Response time is less than 300ms": true
+			},
+			"testPassFailCounts": {
+				"Response status code should be 400 for bad request": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response should contain error message for empty JSON body": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response time is less than 300ms": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				23
+			],
+			"allTests": [
+				{
+					"Response status code should be 400 for bad request": true,
+					"Response should contain error message for empty JSON body": true,
+					"Response time is less than 300ms": true
+				}
+			]
+		},
+		{
+			"id": "537b73ef-7ba4-4145-95b5-f95e1a794782",
+			"name": "Delete a product by valid ID",
+			"url": "https://altashop-api.fly.dev/api/products/88701",
+			"time": 40,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Respon for delete product by ID should be 200": true,
+				"Response must be valid and have a body": true
+			},
+			"testPassFailCounts": {
+				"Respon for delete product by ID should be 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response must be valid and have a body": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				40
+			],
+			"allTests": [
+				{
+					"Respon for delete product by ID should be 200": true,
+					"Response must be valid and have a body": true
+				}
+			]
+		},
+		{
+			"id": "1e342f7d-1187-4fea-8bbd-177d0985d956",
+			"name": "Delete a product by invalid ID",
+			"url": "https://altashop-api.fly.dev/api/products/111111111111",
+			"time": 45,
+			"responseCode": {
+				"code": 500,
+				"name": "Internal Server Error"
+			},
+			"tests": {
+				"Response for Delete a product by invalid ID should be 500": true,
+				"Response must be error and have a body": true
+			},
+			"testPassFailCounts": {
+				"Response for Delete a product by invalid ID should be 500": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response must be error and have a body": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				45
+			],
+			"allTests": [
+				{
+					"Response for Delete a product by invalid ID should be 500": true,
+					"Response must be error and have a body": true
+				}
+			]
+		},
+		{
+			"id": "be8bb250-a502-4a11-a561-7d7e8ac28e9a",
+			"name": "Get a product deleted by valid ID",
+			"url": "https://altashop-api.fly.dev/api/products/88701",
+			"time": 48,
+			"responseCode": {
+				"code": 404,
+				"name": "Not Found"
+			},
+			"tests": {
+				"Check Deleted Post Availability": true,
+				"Response body contains the expected 'error'": true
+			},
+			"testPassFailCounts": {
+				"Check Deleted Post Availability": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response body contains the expected 'error'": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				48
+			],
+			"allTests": [
+				{
+					"Check Deleted Post Availability": true,
+					"Response body contains the expected 'error'": true
+				}
+			]
+		},
+		{
+			"id": "fc8c006a-7d84-4f22-9edf-8ed70c1c09ef",
+			"name": "Create a new product category with valid inputs",
+			"url": "https://altashop-api.fly.dev/api/categories",
+			"time": 62,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"response must be valid and have a body": true,
+				"Response status code should have 200 value": true,
+				"Response data object should have ID, Name, Description": true,
+				"Request body should match expected format and values": true,
+				"Response time is within acceptable range": true,
+				"Response Content-Type header is application/json": true
+			},
+			"testPassFailCounts": {
+				"response must be valid and have a body": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response status code should have 200 value": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response data object should have ID, Name, Description": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Request body should match expected format and values": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response time is within acceptable range": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response Content-Type header is application/json": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				62
+			],
+			"allTests": [
+				{
+					"response must be valid and have a body": true,
+					"Response status code should have 200 value": true,
+					"Response data object should have ID, Name, Description": true,
+					"Request body should match expected format and values": true,
+					"Response time is within acceptable range": true,
+					"Response Content-Type header is application/json": true
+				}
+			]
+		},
+		{
+			"id": "3c9c9998-aa0f-43b9-a68b-c6e0866632b8",
+			"name": "Create a new product category without inputs",
+			"url": "https://altashop-api.fly.dev/api/categories",
+			"time": 31,
+			"responseCode": {
+				"code": 500,
+				"name": "Internal Server Error"
+			},
+			"tests": {
+				"Response status code should be 500 Internal Server Error": true,
+				"Response should contain error message for empty JSON body": true,
+				"Request body should be empty": true
+			},
+			"testPassFailCounts": {
+				"Response status code should be 500 Internal Server Error": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response should contain error message for empty JSON body": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Request body should be empty": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				31
+			],
+			"allTests": [
+				{
+					"Response status code should be 500 Internal Server Error": true,
+					"Response should contain error message for empty JSON body": true,
+					"Request body should be empty": true
+				}
+			]
+		},
+		{
+			"id": "89b3ac89-aeab-4dc7-89d4-b6ad3d6e37a9",
+			"name": "Get category by valid ID",
+			"url": "https://altashop-api.fly.dev/api/categories/31967",
+			"time": 30,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Response must be valid and have a body": true,
+				"Status code is 200": true,
+				"Response contains product ID": true,
+				"Response data object should have ID, Name, Description, Price, Ratings, and Categories properties": true
+			},
+			"testPassFailCounts": {
+				"Response must be valid and have a body": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Status code is 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response contains product ID": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response data object should have ID, Name, Description, Price, Ratings, and Categories properties": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				30
+			],
+			"allTests": [
+				{
+					"Response must be valid and have a body": true,
+					"Status code is 200": true,
+					"Response contains product ID": true,
+					"Response data object should have ID, Name, Description, Price, Ratings, and Categories properties": true
+				}
+			]
+		},
+		{
+			"id": "a23d8fd7-1bad-4f12-81aa-2ff993ad9938",
+			"name": "Get category by invalid ID",
+			"url": "https://altashop-api.fly.dev/api/categories/01",
+			"time": 31,
+			"responseCode": {
+				"code": 404,
+				"name": "Not Found"
+			},
+			"tests": {
+				"Response status code is 404": true,
+				"Response body contains the expected 'error'": true,
+				"Response time is less than 500ms": true
+			},
+			"testPassFailCounts": {
+				"Response status code is 404": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response body contains the expected 'error'": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response time is less than 500ms": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				31
+			],
+			"allTests": [
+				{
+					"Response status code is 404": true,
+					"Response body contains the expected 'error'": true,
+					"Response time is less than 500ms": true
+				}
+			]
+		},
+		{
+			"id": "6dd9adb2-4e95-4f15-bb9b-25a922dd9a11",
+			"name": "Get all categories with valid URL",
+			"url": "https://altashop-api.fly.dev/api/categories",
+			"time": 32,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"response must be valid and have a body": true,
+				"Response status code is 200": true,
+				"Response data object should have ID, Name, Description, Price, Ratings, and Categories properties": true,
+				"Response time is less than 1500ms": true
+			},
+			"testPassFailCounts": {
+				"response must be valid and have a body": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response status code is 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response data object should have ID, Name, Description, Price, Ratings, and Categories properties": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response time is less than 1500ms": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				32
+			],
+			"allTests": [
+				{
+					"response must be valid and have a body": true,
+					"Response status code is 200": true,
+					"Response data object should have ID, Name, Description, Price, Ratings, and Categories properties": true,
+					"Response time is less than 1500ms": true
+				}
+			]
+		},
+		{
+			"id": "8e288a81-230a-4786-9945-7df631c29254",
+			"name": "Get all categories with invalid URL",
+			"url": "https://altashop-api.fly.dev/api/category",
+			"time": 27,
+			"responseCode": {
+				"code": 404,
+				"name": "Not Found"
+			},
+			"tests": {
+				"Response status code is 404": true,
+				"Response body contains the expected string 'not found'": true,
+				"Response time is less than 300ms": true
+			},
+			"testPassFailCounts": {
+				"Response status code is 404": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response body contains the expected string 'not found'": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response time is less than 300ms": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				27
+			],
+			"allTests": [
+				{
+					"Response status code is 404": true,
+					"Response body contains the expected string 'not found'": true,
+					"Response time is less than 300ms": true
+				}
+			]
+		},
+		{
+			"id": "a6fa422c-1c0e-48f6-8a0a-560ace773688",
+			"name": "Create a new order with valid inputs",
+			"url": "https://altashop-api.fly.dev/api/orders",
+			"time": 30,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Response must be valid and have a body": true,
+				"Response status code should have 200 value": true,
+				"Response data array items should have ID, User, Product, and Quantity properties": true,
+				"Request body should match expected format and values": true,
+				"Response time is within acceptable range": true
+			},
+			"testPassFailCounts": {
+				"Response must be valid and have a body": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response status code should have 200 value": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response data array items should have ID, User, Product, and Quantity properties": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Request body should match expected format and values": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response time is within acceptable range": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				30
+			],
+			"allTests": [
+				{
+					"Response must be valid and have a body": true,
+					"Response status code should have 200 value": true,
+					"Response data array items should have ID, User, Product, and Quantity properties": true,
+					"Request body should match expected format and values": true,
+					"Response time is within acceptable range": true
+				}
+			]
+		},
+		{
+			"id": "484b3118-475d-4138-a671-5aedc514f0d0",
+			"name": "Create a new order with empty JSON body",
+			"url": "https://altashop-api.fly.dev/api/orders",
+			"time": 51,
+			"responseCode": {
+				"code": 400,
+				"name": "Bad Request"
+			},
+			"tests": {
+				"Response must be bad request(error) and have a body": true,
+				"Response status code should be 400 for bad request": true,
+				"Response should contain error message for empty JSON body": true,
+				"Request body should be empty": true,
+				"Response time is within acceptable range": true
+			},
+			"testPassFailCounts": {
+				"Response must be bad request(error) and have a body": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response status code should be 400 for bad request": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response should contain error message for empty JSON body": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Request body should be empty": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response time is within acceptable range": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				51
+			],
+			"allTests": [
+				{
+					"Response must be bad request(error) and have a body": true,
+					"Response status code should be 400 for bad request": true,
+					"Response should contain error message for empty JSON body": true,
+					"Request body should be empty": true,
+					"Response time is within acceptable range": true
+				}
+			]
+		},
+		{
+			"id": "9099eaf1-f2c5-4fbb-b6f9-6d4cb6bad35e",
+			"name": "Get all orders with valid URL",
+			"url": "https://altashop-api.fly.dev/api/orders",
+			"time": 292,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"response must be valid and have a body": true,
+				"Response status code is 200": true,
+				"Response data object should have Product, Price, Quantity, Subtotal": true,
+				"Response time is less than 500ms": true
+			},
+			"testPassFailCounts": {
+				"response must be valid and have a body": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response status code is 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response data object should have Product, Price, Quantity, Subtotal": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response time is less than 500ms": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				292
+			],
+			"allTests": [
+				{
+					"response must be valid and have a body": true,
+					"Response status code is 200": true,
+					"Response data object should have Product, Price, Quantity, Subtotal": true,
+					"Response time is less than 500ms": true
+				}
+			]
+		},
+		{
+			"id": "49821fb3-4c0d-4517-a7fb-0ce858fd03ae",
+			"name": "Get all orders with invalid URL",
+			"url": "https://altashop-api.fly.dev/api/order",
+			"time": 27,
+			"responseCode": {
+				"code": 404,
+				"name": "Not Found"
+			},
+			"tests": {
+				"Response status code is 404": true,
+				"Response body contains the expected string 'not found'": true,
+				"Response time is less than 300ms": true
+			},
+			"testPassFailCounts": {
+				"Response status code is 404": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response body contains the expected string 'not found'": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response time is less than 300ms": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				27
+			],
+			"allTests": [
+				{
+					"Response status code is 404": true,
+					"Response body contains the expected string 'not found'": true,
+					"Response time is less than 300ms": true
+				}
+			]
+		},
+		{
+			"id": "c3cad0cc-a983-4746-8def-ce1fec931ecf",
+			"name": "Get order by valid ID",
+			"url": "https://altashop-api.fly.dev/api/orders/13943",
+			"time": 38,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Response must be valid and have a body": true,
+				"Status code is 200": true,
+				"Response contains product ID": true,
+				"Response data object should have ID, User, Product, and Quantity properties": true
+			},
+			"testPassFailCounts": {
+				"Response must be valid and have a body": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Status code is 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response contains product ID": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response data object should have ID, User, Product, and Quantity properties": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				38
+			],
+			"allTests": [
+				{
+					"Response must be valid and have a body": true,
+					"Status code is 200": true,
+					"Response contains product ID": true,
+					"Response data object should have ID, User, Product, and Quantity properties": true
+				}
+			]
+		},
+		{
+			"id": "e5ae322c-9417-4546-a39e-c9ce03075aef",
+			"name": "Get order by invalid ID",
+			"url": "https://altashop-api.fly.dev/api/orders/01",
+			"time": 29,
+			"responseCode": {
+				"code": 404,
+				"name": "Not Found"
+			},
+			"tests": {
+				"Response status code is 404": true,
+				"Response body contains the expected 'error'": true,
+				"Response time is less than 500ms": true
+			},
+			"testPassFailCounts": {
+				"Response status code is 404": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response body contains the expected 'error'": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response time is less than 500ms": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				29
+			],
+			"allTests": [
+				{
+					"Response status code is 404": true,
+					"Response body contains the expected 'error'": true,
+					"Response time is less than 500ms": true
+				}
+			]
+		}
+	],
+	"count": 1,
+	"totalTime": 2566,
+	"collection": {
+		"requests": [
+			{
+				"id": "6c0f3609-46be-43bf-bd7a-bfe093544900",
+				"method": "POST"
+			},
+			{
+				"id": "168e1ef1-16e2-479b-8b67-c8e81065f04f",
+				"method": "POST"
+			},
+			{
+				"id": "1412c640-0917-4c7b-b59a-d36e4560dc58",
+				"method": "POST"
+			},
+			{
+				"id": "fa276ad5-8dee-4dee-affc-165e825b100e",
+				"method": "POST"
+			},
+			{
+				"id": "eaee6ef0-bc9a-4f7c-a743-1510bc5939ad",
+				"method": "POST"
+			},
+			{
+				"id": "98a9afbd-82bc-4d5a-9e64-0009841e33ed",
+				"method": "POST"
+			},
+			{
+				"id": "1ba17714-31da-49eb-997f-8020a1b4aabd",
+				"method": "POST"
+			},
+			{
+				"id": "52c7b43e-8973-4832-8b6c-0a3e2207debc",
+				"method": "POST"
+			},
+			{
+				"id": "9c7a433a-44ab-4877-8049-13c1a23a3c86",
+				"method": "POST"
+			},
+			{
+				"id": "90571194-b510-410f-8b95-dd13a43a2694",
+				"method": "GET"
+			},
+			{
+				"id": "079d4398-d717-475e-8f60-1c1476c7fb41",
+				"method": "GET"
+			},
+			{
+				"id": "187f2120-dc0b-4a4e-9bee-dd4396029b42",
+				"method": "POST"
+			},
+			{
+				"id": "2518c89c-4465-4dcb-985f-029d58a06da5",
+				"method": "GET"
+			},
+			{
+				"id": "20d7ec6f-265e-45ba-9324-26d4d3f7530d",
+				"method": "GET"
+			},
+			{
+				"id": "23375f8b-5b54-4df5-ab69-49617b4d56d1",
+				"method": "GET"
+			},
+			{
+				"id": "92840b4c-b815-4c89-a7b7-cd56931bfb23",
+				"method": "GET"
+			},
+			{
+				"id": "e7f0474f-127c-43b6-bd1a-8c64cbc87a31",
+				"method": "POST"
+			},
+			{
+				"id": "209b76b1-cf5e-41bc-aacb-96256b224561",
+				"method": "POST"
+			},
+			{
+				"id": "537b73ef-7ba4-4145-95b5-f95e1a794782",
+				"method": "DELETE"
+			},
+			{
+				"id": "1e342f7d-1187-4fea-8bbd-177d0985d956",
+				"method": "DELETE"
+			},
+			{
+				"id": "be8bb250-a502-4a11-a561-7d7e8ac28e9a",
+				"method": "GET"
+			},
+			{
+				"id": "fc8c006a-7d84-4f22-9edf-8ed70c1c09ef",
+				"method": "POST"
+			},
+			{
+				"id": "3c9c9998-aa0f-43b9-a68b-c6e0866632b8",
+				"method": "POST"
+			},
+			{
+				"id": "89b3ac89-aeab-4dc7-89d4-b6ad3d6e37a9",
+				"method": "GET"
+			},
+			{
+				"id": "a23d8fd7-1bad-4f12-81aa-2ff993ad9938",
+				"method": "GET"
+			},
+			{
+				"id": "6dd9adb2-4e95-4f15-bb9b-25a922dd9a11",
+				"method": "GET"
+			},
+			{
+				"id": "8e288a81-230a-4786-9945-7df631c29254",
+				"method": "GET"
+			},
+			{
+				"id": "a6fa422c-1c0e-48f6-8a0a-560ace773688",
+				"method": "POST"
+			},
+			{
+				"id": "484b3118-475d-4138-a671-5aedc514f0d0",
+				"method": "POST"
+			},
+			{
+				"id": "9099eaf1-f2c5-4fbb-b6f9-6d4cb6bad35e",
+				"method": "GET"
+			},
+			{
+				"id": "49821fb3-4c0d-4517-a7fb-0ce858fd03ae",
+				"method": "GET"
+			},
+			{
+				"id": "c3cad0cc-a983-4746-8def-ce1fec931ecf",
+				"method": "GET"
+			},
+			{
+				"id": "e5ae322c-9417-4546-a39e-c9ce03075aef",
+				"method": "GET"
+			}
+		]
+	}
+}
