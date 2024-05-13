@@ -1,13 +1,17 @@
-name: learn-github-actions
-run-name: ${{ github.actor }} is learning GitHub Actions
-on: [push]
+name: Automated API tests using Postman CLI
+
+on: push
+
 jobs:
-  check-bats-version:
-    runs-on: ubuntu-latest
+  automated-api-tests:
+    runs-on: windows-latest
     steps:
-      - uses: actions/checkout@v4
-      - uses: actions/setup-node@v4
-        with:
-          node-version: '20'
-      - run: npm install -g bats
-      - run: bats -v
+      - uses: actions/checkout@v3
+      - name: Install Postman CLI
+        run: |
+          powershell.exe -NoProfile -InputFormat None -ExecutionPolicy AllSigned -Command "[System.Net.ServicePointManager]::SecurityProtocol = 3072; iex ((New-Object System.Net.WebClient).DownloadString('https://dl-cli.pstmn.io/install/win64.ps1'))"
+      - name: Login to Postman CLI
+        run: postman login --with-api-key ${{ PMAK-6641b95926c24b000159aeda-4d3dc520fa7c44496ea94f4b86dc0b4f83 }}
+      - name: Run API tests
+        run: |
+          postman collection run "33061954-f6d5aca2-83c1-420a-bf7c-666e7b83c80b" --integration-id "162890-${{ github.run_id }}"
