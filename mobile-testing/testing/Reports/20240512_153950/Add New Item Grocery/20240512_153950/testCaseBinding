@@ -1,0 +1,4 @@
+{"testCaseName":"Test Cases/Successfully add new item with valid inputs","testCaseId":"Test Cases/Successfully add new item with valid inputs","iterationVariableName":""}
+{"testCaseName":"Test Cases/Add new item with empty input","testCaseId":"Test Cases/Add new item with empty input","iterationVariableName":""}
+{"testCaseName":"Test Cases/Add new item with invalid item input","testCaseId":"Test Cases/Add new item with invalid item input","iterationVariableName":""}
+{"testCaseName":"Test Cases/Add new item with invalid item quantity input","testCaseId":"Test Cases/Add new item with invalid item quantity input","iterationVariableName":""}

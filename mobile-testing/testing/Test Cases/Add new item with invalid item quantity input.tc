@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>Add new item with invalid item quantity input</name>
+   <tag></tag>
+   <comment></comment>
+   <testCaseGuid>c1b5c58a-d672-4133-80ae-51b9ff9213b3</testCaseGuid>
+</TestCaseEntity>

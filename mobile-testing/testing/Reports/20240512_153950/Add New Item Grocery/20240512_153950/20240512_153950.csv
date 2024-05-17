@@ -1,0 +1,50 @@
+Suite/Test/Step Name,Browser,Description,Tag,Start time,End time,Duration,Status
+Add New Item Grocery,,,,12-05-2024 15:40:18,12-05-2024 15:46:53,6m - 34.791s,PASSED
+,,,,,,,
+Test Cases/Successfully add new item with valid inputs,,,,12-05-2024 15:42:11,12-05-2024 15:43:28,1m - 17.161s,PASSED
+"startApplication(""C:\Users\AC_001 LENOVO.iD\Documents\test\mobile-app\app.apk"", true)",,,,12-05-2024 15:42:11,12-05-2024 15:43:14,1m - 2.593s,PASSED
+"tap(findTestObject(""Object Repository/Successfully add new item with valid inputs/android.view.View""), 0)",,,,12-05-2024 15:43:14,12-05-2024 15:43:15,1.036s,PASSED
+"tap(findTestObject(""Object Repository/Successfully add new item with valid inputs/android.widget.Button""), 0)",,,,12-05-2024 15:43:15,12-05-2024 15:43:16,0.840s,PASSED
+"tap(findTestObject(""Object Repository/Successfully add new item with valid inputs/android.widget.EditText - Name""), 0)",,,,12-05-2024 15:43:16,12-05-2024 15:43:18,1.905s,PASSED
+"setText(findTestObject(""Object Repository/Successfully add new item with valid inputs/android.widget.EditText - Name""), ""Timun"", 0)",,,,12-05-2024 15:43:18,12-05-2024 15:43:19,1.721s,PASSED
+"tap(findTestObject(""Object Repository/Successfully add new item with valid inputs/android.widget.Button (1)""), 0)",,,,12-05-2024 15:43:19,12-05-2024 15:43:20,0.926s,PASSED
+"tap(findTestObject(""Object Repository/Successfully add new item with valid inputs/android.view.View (1)""), 0)",,,,12-05-2024 15:43:20,12-05-2024 15:43:22,1.563s,PASSED
+"tap(findTestObject(""Object Repository/Successfully add new item with valid inputs/android.widget.EditText - 1, Quantity""), 0)",,,,12-05-2024 15:43:22,12-05-2024 15:43:23,1.154s,PASSED
+"setText(findTestObject(""Object Repository/Successfully add new item with valid inputs/android.widget.EditText - 1, Quantity""), ""3"", 0)",,,,12-05-2024 15:43:23,12-05-2024 15:43:24,1.211s,PASSED
+"tap(findTestObject(""Object Repository/Successfully add new item with valid inputs/android.widget.Button (2)""), 0)",,,,12-05-2024 15:43:24,12-05-2024 15:43:25,0.306s,PASSED
+closeApplication(),,,,12-05-2024 15:43:25,12-05-2024 15:43:28,3.843s,PASSED
+,,,,,,,
+Test Cases/Add new item with empty input,,,,12-05-2024 15:44:40,12-05-2024 15:45:20,40.178s,PASSED
+"startApplication(""C:\Users\AC_001 LENOVO.iD\Documents\test\mobile-app\app.apk"", true)",,,,12-05-2024 15:44:40,12-05-2024 15:45:10,30.130s,PASSED
+"tap(findTestObject(""Object Repository/Add new item with empty input/android.view.View""), 0)",,,,12-05-2024 15:45:10,12-05-2024 15:45:10,0.340s,PASSED
+"tap(findTestObject(""Object Repository/Add new item with empty input/android.widget.Button""), 0)",,,,12-05-2024 15:45:10,12-05-2024 15:45:11,0.781s,PASSED
+"tap(findTestObject(""Object Repository/Add new item with empty input/android.widget.EditText - Name""), 0)",,,,12-05-2024 15:45:11,12-05-2024 15:45:13,2.368s,PASSED
+"tap(findTestObject(""Object Repository/Add new item with empty input/android.widget.EditText - 1, Quantity""), 0)",,,,12-05-2024 15:45:13,12-05-2024 15:45:15,1.462s,PASSED
+"tap(findTestObject(""Object Repository/Add new item with empty input/android.widget.Button (1)""), 0)",,,,12-05-2024 15:45:15,12-05-2024 15:45:16,1.521s,PASSED
+closeApplication(),,,,12-05-2024 15:45:16,12-05-2024 15:45:20,3.543s,PASSED
+,,,,,,,
+Test Cases/Add new item with invalid item input,,,,12-05-2024 15:45:20,12-05-2024 15:46:07,47.162s,PASSED
+"startApplication(""C:\Users\AC_001 LENOVO.iD\Documents\test\mobile-app\app.apk"", true)",,,,12-05-2024 15:45:20,12-05-2024 15:45:53,33.042s,PASSED
+"tap(findTestObject(""Object Repository/Add new item with invalid item input/android.view.View""), 0)",,,,12-05-2024 15:45:53,12-05-2024 15:45:53,0.348s,PASSED
+"tap(findTestObject(""Object Repository/Add new item with invalid item input/android.widget.Button""), 0)",,,,12-05-2024 15:45:53,12-05-2024 15:45:54,1.042s,PASSED
+"tap(findTestObject(""Object Repository/Add new item with invalid item input/android.widget.EditText - Name""), 0)",,,,12-05-2024 15:45:54,12-05-2024 15:45:56,1.644s,PASSED
+"setText(findTestObject(""Object Repository/Add new item with invalid item input/android.widget.EditText - Name""), ""!)(&#^*~^)#!!*)#!("", 0)",,,,12-05-2024 15:45:56,12-05-2024 15:45:57,1.241s,PASSED
+"tap(findTestObject(""Object Repository/Add new item with invalid item input/android.widget.EditText - 1, Quantity""), 0)",,,,12-05-2024 15:45:57,12-05-2024 15:45:58,0.937s,PASSED
+"setText(findTestObject(""Object Repository/Add new item with invalid item input/android.widget.EditText - 1, Quantity""), ""1"", 0)",,,,12-05-2024 15:45:58,12-05-2024 15:46:00,1.440s,PASSED
+"tap(findTestObject(""Object Repository/Add new item with invalid item input/android.widget.Button (1)""), 0)",,,,12-05-2024 15:46:00,12-05-2024 15:46:00,0.688s,PASSED
+"tap(findTestObject(""Object Repository/Add new item with invalid item input/android.view.View (1)""), 0)",,,,12-05-2024 15:46:00,12-05-2024 15:46:02,1.256s,PASSED
+"tap(findTestObject(""Object Repository/Add new item with invalid item input/android.widget.Button (2)""), 0)",,,,12-05-2024 15:46:02,12-05-2024 15:46:03,1.640s,PASSED
+closeApplication(),,,,12-05-2024 15:46:03,12-05-2024 15:46:07,3.654s,PASSED
+,,,,,,,
+Test Cases/Add new item with invalid item quantity input,,,,12-05-2024 15:46:07,12-05-2024 15:46:53,46.019s,PASSED
+"startApplication(""C:\Users\AC_001 LENOVO.iD\Documents\test\mobile-app\app.apk"", true)",,,,12-05-2024 15:46:07,12-05-2024 15:46:39,32.287s,PASSED
+"tap(findTestObject(""Object Repository/Add new item with invalid item quantity input/android.view.View""), 0)",,,,12-05-2024 15:46:39,12-05-2024 15:46:40,0.354s,PASSED
+"tap(findTestObject(""Object Repository/Add new item with invalid item quantity input/android.widget.Button""), 0)",,,,12-05-2024 15:46:40,12-05-2024 15:46:41,1.357s,PASSED
+"tap(findTestObject(""Object Repository/Add new item with invalid item quantity input/android.widget.EditText - Name""), 0)",,,,12-05-2024 15:46:41,12-05-2024 15:46:43,1.653s,PASSED
+"setText(findTestObject(""Object Repository/Add new item with invalid item quantity input/android.widget.EditText - Name""), ""Apel"", 0)",,,,12-05-2024 15:46:43,12-05-2024 15:46:44,1.075s,PASSED
+"tap(findTestObject(""Object Repository/Add new item with invalid item quantity input/android.widget.EditText - 1, Quantity""), 0)",,,,12-05-2024 15:46:44,12-05-2024 15:46:45,1.388s,PASSED
+"setText(findTestObject(""Object Repository/Add new item with invalid item quantity input/android.widget.EditText - 1, Quantity""), ""-1"", 0)",,,,12-05-2024 15:46:45,12-05-2024 15:46:47,1.508s,PASSED
+"tap(findTestObject(""Object Repository/Add new item with invalid item quantity input/android.widget.Button (1)""), 0)",,,,12-05-2024 15:46:47,12-05-2024 15:46:47,0.721s,PASSED
+"tap(findTestObject(""Object Repository/Add new item with invalid item quantity input/android.view.View (1)""), 0)",,,,12-05-2024 15:46:47,12-05-2024 15:46:49,1.672s,PASSED
+"tap(findTestObject(""Object Repository/Add new item with invalid item quantity input/android.widget.Button (2)""), 0)",,,,12-05-2024 15:46:49,12-05-2024 15:46:50,0.976s,PASSED
+closeApplication(),,,,12-05-2024 15:46:50,12-05-2024 15:46:53,2.797s,PASSED
