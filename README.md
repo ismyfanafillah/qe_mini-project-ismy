@@ -64,4 +64,8 @@ sertakan link test case untuk setiap platform:
 - [Qase.io Report Mobile](https://app.qase.io/public/report/b1295cd5727918a2ffacfad97ce6406c7fd3d0b5)
 
 ## Setup 
-cara menggunakan project ini di lokal
+- Install tools yang diperlukan (dapat dilihat dari link mvp sebagai acuan)
+- Create new project (buat sesuai masing-masing project : API, Web, ataupun Mobile)
+- Copy test cases sesuai project yang diinginkan atau git clone github
+- Sesuaikan test cases sesuai dengan yang diperlukan dalam project
+- Lakukan testing (run)
